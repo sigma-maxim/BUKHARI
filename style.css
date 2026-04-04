@@ -1,0 +1,423 @@
+/* style.css - Bukhari Landing Page */
+
+/* Base & Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-black: #050505;
+    --color-dark-grey: #1a1a1a;
+    --color-mid-grey: #333333;
+    --color-neon-yellow: #ccff00;
+    --color-bright-orange: #ff4a00;
+    --color-text-main: #e0e0e0;
+    
+    --font-heading: 'Permanent Marker', cursive;
+    --font-secondary: 'Rock Salt', cursive;
+    --font-body: 'Changa', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-black);
+    color: var(--color-text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* Typography elements */
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--color-black);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-mid-grey);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-bright-orange);
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-mid-grey);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    letter-spacing: 2px;
+}
+.logo span {
+    color: var(--color-bright-orange);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--color-neon-yellow);
+}
+
+.cta-btn {
+    color: var(--color-black);
+    background: var(--color-neon-yellow);
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid transparent;
+}
+
+.cta-btn:hover {
+    background: transparent;
+    color: var(--color-neon-yellow);
+    border-color: var(--color-neon-yellow);
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: url('file:///C:/Users/khale/.gemini/antigravity/brain/03e3b7e7-4a85-4665-8fae-1fc0492259a4/bukhari_hero_dish_1775311109517.png') no-repeat center center/cover;
+    background-attachment: fixed;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+    mix-blend-mode: multiply;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.glitch {
+    font-family: var(--font-heading);
+    font-size: 7rem;
+    color: #fff;
+    position: relative;
+    text-shadow: 4px 4px 0px var(--color-bright-orange),
+                 -4px -4px 0px var(--color-neon-yellow);
+    animation: drift 3s infinite alternate;
+}
+
+@keyframes drift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(2px, -2px); }
+}
+
+.hero-subtitle {
+    font-family: var(--font-secondary);
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    transform: rotate(-3deg);
+}
+
+.graffiti-btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--color-bright-orange);
+    color: var(--color-black);
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 3px solid #fff;
+    box-shadow: 10px 10px 0px var(--color-neon-yellow);
+    transition: all 0.2s ease;
+}
+
+.graffiti-btn:hover {
+    transform: translate(5px, 5px);
+    box-shadow: 5px 5px 0px var(--color-neon-yellow);
+}
+
+/* Underground Flavor Section */
+.underground {
+    padding: 100px 5%;
+    background: url('file:///C:/Users/khale/.gemini/antigravity/brain/03e3b7e7-4a85-4665-8fae-1fc0492259a4/bukhari_wall_bg_1775311188583.png') no-repeat center center/cover;
+    position: relative;
+    border-top: 5px solid var(--color-bright-orange);
+    border-bottom: 5px solid var(--color-neon-yellow);
+}
+
+.underground::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(10, 10, 10, 0.85); /* Darken bg slightly */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content h2 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+.text-content h2 span {
+    color: var(--color-bright-orange);
+    display: block;
+    font-size: 4.5rem;
+    text-shadow: 2px 2px 10px rgba(255, 74, 0, 0.5);
+    transform: rotate(-2deg);
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.polaroid {
+    background: #e0e0e0;
+    padding: 15px 15px 50px 15px;
+    transform: rotate(4deg);
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.8);
+    transition: transform 0.3s;
+}
+
+.polaroid:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.polaroid img {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    filter: contrast(1.2) sepia(0.2);
+}
+
+/* Menu Section */
+.menu {
+    padding: 100px 5%;
+    background-color: var(--color-dark-grey);
+    background-image: radial-gradient(var(--color-mid-grey) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.menu-heading {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.menu-heading h2 {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    color: #fff;
+}
+.menu-heading span {
+    color: var(--color-neon-yellow);
+}
+
+.underline-rough {
+    width: 150px;
+    height: 8px;
+    background: var(--color-bright-orange);
+    margin: 10px auto;
+    border-radius: 20px 0 20px 0;
+    transform: rotate(-1deg);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    background: var(--color-black);
+    border: 3px solid var(--color-mid-grey);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Card tilt effect for JS */
+.menu-item {
+    transition: transform 0.1s, border-color 0.3s;
+}
+
+.menu-item:hover {
+    border-color: var(--color-neon-yellow);
+}
+
+.menu-item h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.menu-item h3 span {
+    display: block;
+    color: var(--color-bright-orange);
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.menu-item .desc {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.menu-item .price {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-neon-yellow);
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    transform: rotate(-5deg);
+}
+
+/* Footer Section */
+.location-footer {
+    position: relative;
+    padding: 100px 5% 50px 5%;
+    background: url('file:///C:/Users/khale/.gemini/antigravity/brain/03e3b7e7-4a85-4665-8fae-1fc0492259a4/bukhari_footer_map_1775311358405.png') no-repeat center center/cover;
+    border-top: 5px solid var(--color-bright-orange);
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--color-bright-orange);
+    margin-bottom: 3rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.info-block h4 {
+    font-family: var(--font-secondary);
+    font-size: 1.2rem;
+    color: var(--color-neon-yellow);
+    margin-bottom: 1rem;
+}
+
+.info-block p {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.tag {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.2);
+    transform: rotate(-5deg);
+    margin-top: 3rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .split-layout {
+        flex-direction: column;
+    }
+    
+    .glitch {
+        font-size: 4rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
