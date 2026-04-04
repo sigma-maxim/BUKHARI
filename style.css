@@ -118,7 +118,8 @@ h1, h2, h3, h4 {
     align-items: center;
     justify-content: center;
     position: relative;
-    background: url('file:///C:/Users/khale/.gemini/antigravity/brain/03e3b7e7-4a85-4665-8fae-1fc0492259a4/bukhari_hero_dish_1775311109517.png') no-repeat center center/cover;
+    /* Updated path to public image URL */
+    background: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     background-attachment: fixed;
 }
 
@@ -183,7 +184,8 @@ h1, h2, h3, h4 {
 /* Underground Flavor Section */
 .underground {
     padding: 100px 5%;
-    background: url('file:///C:/Users/khale/.gemini/antigravity/brain/03e3b7e7-4a85-4665-8fae-1fc0492259a4/bukhari_wall_bg_1775311188583.png') no-repeat center center/cover;
+    /* Updated path to public image URL */
+    background: url('https://images.unsplash.com/photo-1499561385668-5ebdb06a7981?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     position: relative;
     border-top: 5px solid var(--color-bright-orange);
     border-bottom: 5px solid var(--color-neon-yellow);
@@ -344,7 +346,8 @@ h1, h2, h3, h4 {
 .location-footer {
     position: relative;
     padding: 100px 5% 50px 5%;
-    background: url('file:///C:/Users/khale/.gemini/antigravity/brain/03e3b7e7-4a85-4665-8fae-1fc0492259a4/bukhari_footer_map_1775311358405.png') no-repeat center center/cover;
+    /* Updated path to public image URL */
+    background: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
     border-top: 5px solid var(--color-bright-orange);
 }
 
